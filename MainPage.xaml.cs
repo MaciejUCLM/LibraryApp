@@ -32,5 +32,23 @@ namespace LibraryApp
         {
             MainFrame.Navigate(typeof(Description));
         }
+
+        private void GoToPLayer(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Player));
+        }
+
+        private void GoToBrowse(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Browse));
+        }
+
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
     }
 }

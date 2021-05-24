@@ -12,15 +12,26 @@
         <Grid Height="100">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="291*" />
-                <ColumnDefinition Width="902*" />
+                <ColumnDefinition Width="151*" />
+                <ColumnDefinition Width="751*" />
                 <ColumnDefinition Width="307*" />
             </Grid.ColumnDefinitions>
             <Button
-                Grid.ColumnSpan="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
+                Grid.Column="2"
+                Margin="155,0,0,0"
                 Click="GoToDescription"
                 Content="Description" />
+            <Button
+                Grid.Column="2"
+                Grid.ColumnSpan="1"
+                Margin="393,0,0,0"
+                Click="GoToPLayer"
+                Content="Player" />
+            <Button
+                Grid.Column="1"
+                Margin="76,0,0,0"
+                Click="GoToBrowse"
+                Content="Browse" />
         </Grid>
         <Frame Name="MainFrame" />
 
