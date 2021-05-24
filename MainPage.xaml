@@ -5,35 +5,55 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:LibraryApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Background="White"
     mc:Ignorable="d">
 
-    <StackPanel>
+    <StackPanel Background="Black">
         <Grid Height="100">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="291*" />
-                <ColumnDefinition Width="151*" />
                 <ColumnDefinition Width="751*" />
                 <ColumnDefinition Width="307*" />
             </Grid.ColumnDefinitions>
             <Button
-                Grid.Column="2"
-                Margin="155,0,0,0"
+                Grid.Column="1"
+                Margin="184,29,0,0"
+                VerticalAlignment="Top"
+                Background="White"
                 Click="GoToDescription"
                 Content="Description" />
             <Button
-                Grid.Column="2"
-                Grid.ColumnSpan="1"
-                Margin="393,0,0,0"
+                Grid.Column="1"
+                Margin="0,29,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Background="White"
                 Click="GoToPLayer"
                 Content="Player" />
             <Button
                 Grid.Column="1"
-                Margin="76,0,0,0"
+                Margin="46,29,0,0"
+                VerticalAlignment="Top"
+                Background="White"
                 Click="GoToBrowse"
-                Content="Browse" />
+                Content="Browse"
+                FocusVisualPrimaryBrush="White"
+                FocusVisualSecondaryBrush="#99FFFFFF"
+                Foreground="Black" />
+            <Image
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                FocusVisualPrimaryBrush="White"
+                Source="/Assets/netflix_logo.png" />
         </Grid>
-        <Frame Name="MainFrame" />
+        <Frame x:Name="MainFrame" />
+        <Border
+            Height="3"
+            Background="#FFD1D1D1"
+            BorderBrush="#FFD1D1D1"
+            BorderThickness="1"
+            FocusVisualPrimaryBrush="{x:Null}"
+            FocusVisualSecondaryBrush="{x:Null}" />
 
     </StackPanel>
 </Page>
