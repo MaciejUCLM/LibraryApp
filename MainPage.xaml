@@ -5,55 +5,112 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:LibraryApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="1246"
+    Height="580"
     Background="White"
     mc:Ignorable="d">
 
-    <StackPanel Background="Black">
-        <Grid Height="100">
+    <StackPanel
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Background="Black">
+
+        <Grid
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FocusVisualPrimaryBrush="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="291*" />
-                <ColumnDefinition Width="751*" />
-                <ColumnDefinition Width="307*" />
+                <ColumnDefinition Width="291" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="246" />
             </Grid.ColumnDefinitions>
+            <Frame
+                x:Name="MainFrame"
+                Grid.Row="1"
+                Grid.ColumnSpan="3" />
             <Button
                 Grid.Column="1"
+                Width="91"
+                Height="32"
                 Margin="184,29,0,0"
                 VerticalAlignment="Top"
                 Background="White"
                 Click="GoToDescription"
-                Content="Description" />
+                Content="Description"
+                FocusVisualPrimaryBrush="White"
+                FocusVisualSecondaryBrush="White" />
             <Button
                 Grid.Column="1"
+                Width="58"
+                Height="32"
                 Margin="0,29,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Background="White"
                 Click="GoToPLayer"
-                Content="Player" />
+                Content="Player"
+                FocusVisualPrimaryBrush="White"
+                FocusVisualSecondaryBrush="White"
+                Foreground="Black" />
             <Button
                 Grid.Column="1"
+                Width="65"
+                Height="32"
                 Margin="46,29,0,0"
                 VerticalAlignment="Top"
                 Background="White"
                 Click="GoToBrowse"
                 Content="Browse"
                 FocusVisualPrimaryBrush="White"
-                FocusVisualSecondaryBrush="#99FFFFFF"
+                FocusVisualSecondaryBrush="White"
                 Foreground="Black" />
             <Image
-                HorizontalAlignment="Stretch"
+                Grid.Column="2"
+                Width="70"
+                Height="70.3"
+                Margin="0,0,27,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                FocusVisualPrimaryBrush="#FFFDFDFD"
+                FocusVisualSecondaryBrush="White"
+                Source="/Assets/avatar.jpg" />
+            <UserControl
+                Width="0"
+                Height="0"
+                Margin="207,60,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <Border
+                Grid.Row="1"
+                Grid.ColumnSpan="3"
+                Margin="0,0,0,-3"
+                Background="#FFD1D1D1"
+                BorderBrush="#FFD1D1D1"
+                BorderThickness="1"
+                FocusVisualPrimaryBrush="{x:Null}"
+                FocusVisualSecondaryBrush="{x:Null}" />
+            <Button
+                Width="291"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Stretch"
-                FocusVisualPrimaryBrush="White"
-                Source="/Assets/netflix_logo.png" />
+                Click="GoToBrowse">
+                <Image
+                    Margin="0,-6,0,-7"
+                    d:LayoutRounding="Auto"
+                    FocusVisualPrimaryBrush="White"
+                    RenderTransformOrigin="0.5,0.5"
+                    Source="/Assets/netflix_logo.png"
+                    UseLayoutRounding="False">
+                    <Image.RenderTransform>
+                        <CompositeTransform SkewX="0.434" TranslateX="-0.326" />
+                    </Image.RenderTransform>
+                </Image>
+            </Button>
         </Grid>
-        <Frame x:Name="MainFrame" />
-        <Border
-            Height="3"
-            Background="#FFD1D1D1"
-            BorderBrush="#FFD1D1D1"
-            BorderThickness="1"
-            FocusVisualPrimaryBrush="{x:Null}"
-            FocusVisualSecondaryBrush="{x:Null}" />
 
     </StackPanel>
 </Page>
