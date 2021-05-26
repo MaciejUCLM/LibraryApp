@@ -5,34 +5,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:LibraryApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="1480"
+    Height="766"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid Background="Black">
+    <Grid Background="Black" FocusVisualPrimaryBrush="White">
         <Button
-            Width="240"
-            Height="300"
-            Margin="20,20,0,0"
+            Width="160"
+            Height="224"
+            Margin="22,22,0,0"
             Padding="0,0,0,0"
-            HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Background="#00000000" BorderBrush="#FFECECEC" Click="Button_Click">
-            <StackPanel
-                Width="240"
-                Height="300"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top" BorderBrush="White">
+            Background="#05000000"
+            BorderBrush="#FCD4D4D4"
+            BorderThickness="2,2,2,2"
+            Click="Button_Click"
+            FocusVisualPrimaryBrush="#FF616161"
+            FocusVisualSecondaryBrush="#FF6E6E6E"
+            Foreground="#FF707070">
+            <StackPanel Width="155.8" BorderBrush="White">
                 <Image
-                    Width="200"
-                    Height="120"
-                    Margin="20,20,20,0"
-                    HorizontalAlignment="Center" />
+                    Height="80"
+                    Margin="20,15,20,0"
+                    HorizontalAlignment="Stretch" />
                 <TextBlock
-                    Width="200"
-                    Height="120"
+                    Height="80"
+                    Margin="20,20,20,20"
                     SelectionChanged="TextBlock_SelectionChanged"
                     Text=""
-                    TextWrapping="Wrap" Margin="0,20,0,0" />
+                    TextWrapping="Wrap" />
             </StackPanel>
         </Button>
 
