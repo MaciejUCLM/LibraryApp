@@ -20,7 +20,6 @@
             Background="#05000000"
             BorderBrush="#FCD4D4D4"
             BorderThickness="2,2,2,2"
-            Click="Button_Click"
             FocusVisualPrimaryBrush="#FF616161"
             FocusVisualSecondaryBrush="#FF6E6E6E"
             Foreground="#FF707070">
@@ -32,7 +31,6 @@
                 <TextBlock
                     Height="80"
                     Margin="20,20,20,20"
-                    SelectionChanged="TextBlock_SelectionChanged"
                     Text=""
                     TextWrapping="Wrap" />
             </StackPanel>
