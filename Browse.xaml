@@ -13,7 +13,8 @@
             Margin="30,30,30,30"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"
-            VerticalScrollBarVisibility="Auto">
+            VerticalScrollBarVisibility="Visible"
+            Visibility="Visible">
             <VariableSizedWrapGrid x:Name="PaneHolder" Orientation="Horizontal" />
         </ScrollViewer>
 

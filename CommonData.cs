@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace LibraryApp
 {
@@ -17,6 +18,7 @@ namespace LibraryApp
         }
 
         public Video SelectedVideo = null;
+        public Frame NavigationFrame = null;
 
         private CommonData()
         {
