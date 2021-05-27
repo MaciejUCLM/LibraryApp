@@ -9,10 +9,12 @@ namespace LibraryApp
     class Video
     {
         public string Title { get; set; }
+        public string Path { get; set; }
 
-        public Video(string title, string metaname)
+        public Video(string title, string path)
         {
             Title = title;
+            Path = path;
         }
     }
 }
