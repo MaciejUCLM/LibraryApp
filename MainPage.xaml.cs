@@ -25,23 +25,23 @@ namespace LibraryApp
         public MainPage()
         {
             this.InitializeComponent();
-            MainFrame.Navigate(typeof(Browse));
+            MainFrame.Navigate(typeof(Browse), MainFrame);
             Persistence.GetInstance().Scan();
         }
 
         private void GoToDescription(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Description));
+            MainFrame.Navigate(typeof(Description), MainFrame);
         }
 
         private void GoToPLayer(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Player));
+            MainFrame.Navigate(typeof(Player), MainFrame);
         }
 
         private void GoToBrowse(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Browse));
+            MainFrame.Navigate(typeof(Browse), MainFrame);
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
@@ -50,11 +50,6 @@ namespace LibraryApp
             {
                 MainFrame.GoBack();
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
