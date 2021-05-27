@@ -28,8 +28,8 @@ namespace LibraryApp
         {
             this.InitializeComponent();
             var img = "ilpadrino.jpg";
-            var txt = "ilpadrino.txt";
-            imageMovie.Source = new BitmapImage(new Uri(Persistence.GetFilePath(img), UriKind.Relative));
+            var txt = "ilpadrino.json";
+            imageMovie.Source = new BitmapImage(new Uri(Persistence.GetFilePath(img)));
             var text = File.ReadAllText(Persistence.GetFilePath(txt));
             descrTextBlock.Text = text;
 
