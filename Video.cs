@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace LibraryApp
 {
-    class Video
+    public class Video
     {
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
@@ -27,13 +29,15 @@ namespace LibraryApp
                         Description = fields[i + 2];
                         break;
                     case "image":
-                        Image = fields[i + 2];
+                        Image = Persistence.GetInstance().GetFilePath(fields[i + 2]);
                         break;
                     case "video":
-                        Path = fields[i + 2];
+                        Path = Persistence.GetInstance().GetFilePath(fields[i + 2]);
                         break;
                 }
             }
         }
+
+        public ImageSource GetImage() => new BitmapImage(new Uri(Image));
     }
 }

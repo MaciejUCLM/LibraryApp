@@ -24,14 +24,23 @@ namespace LibraryApp
     /// </summary>
     public sealed partial class Description : Page
     {
+        private Video details;
+
         public Description()
         {
             this.InitializeComponent();
-            var img = "ilpadrino.jpg";
-            var txt = "ilpadrino.txt";
-            imageMovie.Source = new BitmapImage(new Uri(Persistence.GetFilePath(img), UriKind.Relative));
-            var text = File.ReadAllText(Persistence.GetFilePath(txt));
-            descrTextBlock.Text = text;
+        }
+
+        public void SetVideo(Video video)
+        {
+            details = video;
+            //details.Title
+            imageMovie.Source = details.GetImage();
+            descrTextBlock.Text = details.Description;
+        }
+
+        private void watchButton_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
