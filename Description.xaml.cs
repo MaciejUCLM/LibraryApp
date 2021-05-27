@@ -24,7 +24,6 @@ namespace LibraryApp
     /// </summary>
     public sealed partial class Description : Page
     {
-        private Frame navigation;
         private Video details;
 
         public Description()
@@ -35,7 +34,6 @@ namespace LibraryApp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            navigation = e.Parameter as Frame;
             SetVideo(CommonData.GetInstance().SelectedVideo);
         }
 
@@ -52,7 +50,7 @@ namespace LibraryApp
 
         private void watchButton_Click(object sender, RoutedEventArgs e)
         {
-            navigation.Navigate(typeof(Player));
+            CommonData.GetInstance().NavigationFrame.Navigate(typeof(Player));
         }
     }
 }

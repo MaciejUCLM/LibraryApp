@@ -18,14 +18,6 @@ namespace LibraryApp
     public sealed partial class Browse : Page
     {
 
-        private Frame navigation;
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            navigation = e.Parameter as Frame;
-        }
-
         public Browse()
         {
             this.InitializeComponent();
@@ -33,7 +25,9 @@ namespace LibraryApp
         }
 
         public void PutPanes()
-        {   
+        {
+            PaneHolder.Children.Clear();
+
             Persistence p = Persistence.GetInstance();
             if (p.ScanPathExists())
                 p.Scan();

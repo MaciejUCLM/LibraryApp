@@ -20,8 +20,12 @@ namespace LibraryApp
 {
     public sealed partial class Pane : UserControl
     {
-
         public Pane()
+        {
+            this.InitializeComponent();
+        }
+
+        public Pane(Video video)
         {
             this.InitializeComponent();
         }
@@ -36,14 +40,9 @@ namespace LibraryApp
             PaneTextBlock.Text = text;
         }
 
-        public double GetHeight()
-        {
-            return PaneButton.Height;
-        }
-
         private void GoToDescription(object sender, RoutedEventArgs e)
         {
-            
+            CommonData.GetInstance().NavigationFrame.Navigate(typeof(Description));
         }
     }
 }

@@ -25,22 +25,23 @@ namespace LibraryApp
         public MainPage()
         {
             this.InitializeComponent();
+            CommonData.GetInstance().NavigationFrame = MainFrame;
             MainFrame.Navigate(typeof(Browse));
         }
 
         private void GoToDescription(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Description), MainFrame);
+            MainFrame.Navigate(typeof(Description));
         }
 
         private void GoToPLayer(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Player), MainFrame);
+            MainFrame.Navigate(typeof(Player));
         }
 
         private void GoToBrowse(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Browse), MainFrame);
+            MainFrame.Navigate(typeof(Browse));
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
