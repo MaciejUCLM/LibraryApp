@@ -25,15 +25,8 @@ namespace LibraryApp
         public void PutPanes()
         {
             TempTextBlock.Text += "Starting..." + "\n";
-            TempTextBlock.Text += MainPage.DirectoryPath + "\n";
-            if (File.Exists(MainPage.DirectoryPath))
-            {
-                TempTextBlock.Text += "Directory" + "\n";
-                foreach (string fileName in Directory.GetFiles(MainPage.DirectoryPath))
-                {
-                    TempTextBlock.Text += fileName + "\n";
-                }
-            }
+            TempTextBlock.Text += "\n";
+            // USE PERSISTENCE CLASS FOR THIS - NOT IMPLEMENTED YET - MACIEK
         }
 
         public static T CloneXaml<T>(T source)
