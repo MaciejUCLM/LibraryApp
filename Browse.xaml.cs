@@ -27,21 +27,15 @@ namespace LibraryApp
             Persistence p = Persistence.GetInstance();
             if (p.ScanPathExists())
                 p.Scan();
-            
+
+            Pane pane;
             foreach (Video video in p.Videos)
             {
-                Pane pane = new Pane();
-                
+                pane = new Pane();
+                pane.SetImage(video.GetImage());
+                pane.SetText(video.Description);
+                PaneHolder.Children.Add(pane);
             }
-
-            // USE PERSISTENCE CLASS FOR THIS - NOT IMPLE
-            // MENTED YET - MACIEK
-        }
-
-        public static T CloneXaml<T>(T source)
-        {
-            Pane pane = new Pane();
-            return default;
         }
 
     }

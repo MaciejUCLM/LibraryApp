@@ -25,14 +25,24 @@ namespace LibraryApp
             this.InitializeComponent();
         }
 
-        public void setImage(BitmapImage image)
+        public void SetImage(ImageSource image)
         {
             PaneImage.Source = image;
         }
 
-        public void setText(string text)
+        public void SetText(string text)
         {
             PaneTextBlock.Text = text;
+        }
+
+        public double GetHeight()
+        {
+            return PaneButton.Height;
+        }
+
+        private void GoToDescription(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

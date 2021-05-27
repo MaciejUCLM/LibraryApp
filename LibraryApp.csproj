@@ -125,8 +125,8 @@
     <Compile Include="Description.xaml.cs">
       <DependentUpon>Description.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EmptyPane.xaml.cs">
-      <DependentUpon>EmptyPane.xaml</DependentUpon>
+    <Compile Include="Pane.xaml.cs">
+      <DependentUpon>Pane.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -198,7 +198,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EmptyPane.xaml">
+    <Page Include="Pane.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
