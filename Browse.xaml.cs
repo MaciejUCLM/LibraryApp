@@ -26,7 +26,9 @@ namespace LibraryApp
         {
             TempTextBlock.Text += "Starting..." + "\n";
             TempTextBlock.Text += "\n";
-            // USE PERSISTENCE CLASS FOR THIS - NOT IMPLEMENTED YET - MACIEK
+            foreach (var v in Persistence.GetInstance().Videos)
+            {
+            }
         }
 
         public static T CloneXaml<T>(T source)
