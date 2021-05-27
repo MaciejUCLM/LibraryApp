@@ -6,6 +6,8 @@ namespace LibraryApp
 {
     class Persistence
     {
+        public static string GetFilePath(string name) => Path.Combine(Environment.CurrentDirectory, "Videos", name);
+
         private static Persistence instance = null;
         public static Persistence GetInstance()
         {
@@ -14,12 +16,14 @@ namespace LibraryApp
             return instance;
         }
 
-        public static string GetFilePath(string name) => Path.Combine(Environment.CurrentDirectory, "Videos", name);
+        private List<Video> mVideos;
 
+        public List<Video> Videos { get; }
         public string ScanPath { get; set; }
 
         private Persistence()
         {
+            mVideos = new List<Video>();
         }
 
         public bool ScanPathExists() => Directory.Exists(ScanPath);
@@ -30,7 +34,12 @@ namespace LibraryApp
                 ScanPath = Path.Combine(Environment.CurrentDirectory, "Videos");
             // throw new DirectoryNotFoundException("The specified library location has not been found");
             List<string> files = new List<string>(Directory.GetFiles(ScanPath));
-            files.FindAll(x => x.EndsWith(".txt"));
+            files = files.FindAll(x => x.EndsWith(".json"));
+            foreach (var f in files)
+            {
+                var v = new Video(File.ReadAllText(f));
+                mVideos.Add(v);
+            }
         }
     }
 }
