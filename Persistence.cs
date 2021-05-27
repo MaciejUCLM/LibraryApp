@@ -14,11 +14,7 @@ namespace LibraryApp
             return instance;
         }
 
-        public static string ReadTextFile(string name)
-        {
-            var path = Path.Combine(Environment.CurrentDirectory, "Videos", name);
-            return File.ReadAllText(path);
-        }
+        public static string GetFilePath(string name) => Path.Combine(Environment.CurrentDirectory, "Videos", name);
 
         public string ScanPath { get; set; }
 

@@ -9,7 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Button" Margin="106,111,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="watchButton" Content="WATCH" Margin="189,642,0,0" VerticalAlignment="Top" Height="64" Width="134"/>
+        <Image x:Name="imageMovie" HorizontalAlignment="Left" Height="468" Margin="106,109,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBlock x:Name="descrTextBlock" HorizontalAlignment="Left" Margin="516,109,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="468" Width="536" FontSize="14" FontStyle="Italic"/>
 
     </Grid>
 </Page>
