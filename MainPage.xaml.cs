@@ -36,7 +36,8 @@ namespace LibraryApp
 
         private void GoToPLayer(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Player));
+            if (CommonData.GetInstance().SelectedVideo != null)
+                MainFrame.Navigate(typeof(Player));
         }
 
         private void GoToBrowse(object sender, RoutedEventArgs e)
