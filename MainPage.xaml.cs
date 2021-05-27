@@ -36,13 +36,14 @@ namespace LibraryApp
 
         private void GoToPLayer(object sender, RoutedEventArgs e)
         {
-            if (CommonData.GetInstance().SelectedVideo != null)
+            if (CommonData.GetInstance().SelectedVideo != null && !MainFrame.SourcePageType.Equals(typeof(Player)))
                 MainFrame.Navigate(typeof(Player));
         }
 
         private void GoToBrowse(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(typeof(Browse));
+            if (!MainFrame.SourcePageType.Equals(typeof(Browse)))
+                MainFrame.Navigate(typeof(Browse));
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
