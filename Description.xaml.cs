@@ -27,10 +27,10 @@ namespace LibraryApp
         public Description()
         {
             this.InitializeComponent();
-            var path = "ilpadrino.jpg";
-            descrTextBlock.Text = path;
-            imageMovie.Source = new BitmapImage(new Uri(Path.Combine("Assets", path), UriKind.Relative));
-            var text = Persistence.ReadTextFile(path);
+            var img = "ilpadrino.jpg";
+            var txt = "ilpadrino.txt";
+            imageMovie.Source = new BitmapImage(new Uri(Persistence.GetFilePath(img), UriKind.Relative));
+            var text = File.ReadAllText(Persistence.GetFilePath(txt));
             descrTextBlock.Text = text;
 
         }
