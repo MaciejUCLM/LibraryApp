@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
@@ -12,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +27,12 @@ namespace LibraryApp
         public Description()
         {
             this.InitializeComponent();
+            var current = Directory.GetCurrentDirectory();
+            descrTextBlock.Text = current + "\\Assets\\ilpadrino.jpg";
+            imageMovie.Source = new BitmapImage(new Uri(current + "\\Assets\\ilpadrino.jpg"));
+            var text = File.ReadAllText(current + "\\Assets\\ilpadrino.txt");
+            descrTextBlock.Text = text;
+
         }
     }
 }

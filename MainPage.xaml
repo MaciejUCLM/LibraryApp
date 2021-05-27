@@ -5,10 +5,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:LibraryApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    MinWidth="800"
+    MinHeight="600"
+    HorizontalContentAlignment="Stretch"
     Background="White"
-    mc:Ignorable="d" RenderTransformOrigin="0.5,0.5" MinWidth="800" MinHeight="600" HorizontalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+    RenderTransformOrigin="0.5,0.5"
+    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+    mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="Black">
+    <StackPanel
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Background="Black">
 
         <Grid
             HorizontalAlignment="Stretch"
@@ -16,7 +24,7 @@
             FocusVisualPrimaryBrush="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="8003*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="291" />
@@ -26,7 +34,9 @@
             <Frame
                 x:Name="MainFrame"
                 Grid.Row="1"
-                Grid.ColumnSpan="3" />
+                Grid.ColumnSpan="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
             <Button
                 Grid.Column="1"
                 Width="91"
@@ -42,9 +52,7 @@
                 Grid.Column="1"
                 Width="58"
                 Height="32"
-                Margin="0,29,0,0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
+                Margin="378,0,0,0"
                 Background="White"
                 Click="GoToPLayer"
                 Content="Player"
@@ -91,11 +99,12 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                 FocusVisualSecondaryBrush="{x:Null}" />
             <Button
+                Width="290"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Stretch"
                 Click="GoToBrowse"
                 FocusVisualPrimaryBrush="#00000000"
-                Foreground="#00000000" Width="290">
+                Foreground="#00000000">
                 <Image
                     Margin="0,-6,0,-7"
                     d:LayoutRounding="Auto"
