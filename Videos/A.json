@@ -2,5 +2,8 @@
   "title": "A",
   "desc": "A is a fantastic film with dramatic tension.",
   "image": "amelie.jpg",
-  "video": "A.mp4"
+  "video": "A.mp4",
+  "category": "thriller",
+  "age": "16",
+  "director": "Niki Caro"
 }
