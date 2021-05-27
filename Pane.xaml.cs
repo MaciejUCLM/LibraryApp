@@ -20,14 +20,19 @@ namespace LibraryApp
 {
     public sealed partial class Pane : UserControl
     {
+
+        private Video video;
+
         public Pane()
         {
             this.InitializeComponent();
         }
 
-        public Pane(Video video)
+        public Pane(Video video) : this()
         {
-            this.InitializeComponent();
+            this.video = video;
+            SetImage(video.GetImage());
+            SetText(video.Description);
         }
 
         public void SetImage(ImageSource image)
@@ -42,6 +47,7 @@ namespace LibraryApp
 
         private void GoToDescription(object sender, RoutedEventArgs e)
         {
+            CommonData.GetInstance().SelectedVideo = video;
             CommonData.GetInstance().NavigationFrame.Navigate(typeof(Description));
         }
     }

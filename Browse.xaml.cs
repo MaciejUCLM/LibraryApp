@@ -17,17 +17,20 @@ namespace LibraryApp
     /// </summary>
     public sealed partial class Browse : Page
     {
-
         public Browse()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            PaneHolder.Children.Clear();
             PutPanes();
         }
 
         public void PutPanes()
         {
-            PaneHolder.Children.Clear();
-
             Persistence p = Persistence.GetInstance();
             if (p.ScanPathExists())
                 p.Scan();
@@ -35,9 +38,7 @@ namespace LibraryApp
             Pane pane;
             foreach (Video video in p.Videos)
             {
-                pane = new Pane();
-                pane.SetImage(video.GetImage());
-                pane.SetText(video.Description);
+                pane = new Pane(video);
                 PaneHolder.Children.Add(pane);
             }
         }
