@@ -35,8 +35,13 @@ namespace LibraryApp
         {
             details = video;
             //details.Title
-            imageMovie.Source = new BitmapImage(new Uri(details.Image));
+            imageMovie.Source = details.GetImage();
             descrTextBlock.Text = details.Description;
+        }
+
+        private void watchButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -31,7 +31,7 @@ namespace LibraryApp
 
         public void SetSource(Video src)
         {
-            playerWindow.PosterSource = new BitmapImage(new Uri(src.Image));
+            playerWindow.PosterSource = src.GetImage();
             playerWindow.Source = MediaSource.CreateFromUri(new Uri(src.Path));
             playerWindow.MediaPlayer.Play();
         }
