@@ -24,7 +24,7 @@
             FocusVisualPrimaryBrush="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="90" />
-                <RowDefinition Height="8003*" />
+                <RowDefinition Height="803*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="291" />
@@ -81,12 +81,7 @@
                 FocusVisualPrimaryBrush="#FFFDFDFD"
                 FocusVisualSecondaryBrush="White"
                 Source="/Assets/avatar.jpg" />
-            <UserControl
-                Width="0"
-                Height="0"
-                Margin="207,60,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top" />
+            
             <Border
                 Grid.Row="1"
                 Grid.ColumnSpan="3"
