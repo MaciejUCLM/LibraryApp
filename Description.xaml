@@ -9,9 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="watchButton" Content="WATCH" Margin="189,642,0,0" VerticalAlignment="Top" Height="64" Width="134"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="watchButton" Content="WATCH" Margin="750,436,0,77" VerticalAlignment="Stretch" Height="64" Width="134" VerticalContentAlignment="Center" RenderTransformOrigin="0.504,0.445"/>
         <Image x:Name="imageMovie" HorizontalAlignment="Left" Height="468" Margin="106,109,0,0" VerticalAlignment="Top" Width="300"/>
-        <TextBlock x:Name="descrTextBlock" HorizontalAlignment="Left" Margin="516,109,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="468" Width="536" FontSize="14" FontStyle="Italic"/>
+        <TextBlock x:Name="descrTextBlock" HorizontalAlignment="Left" Margin="516,109,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="221" Width="536" FontSize="14" FontStyle="Italic"/>
 
     </Grid>
 </Page>
