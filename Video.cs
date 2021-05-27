@@ -27,10 +27,10 @@ namespace LibraryApp
                         Description = fields[i + 2];
                         break;
                     case "image":
-                        Image = Persistence.GetFilePath(fields[i + 2]);
+                        Image = Persistence.GetInstance().GetFilePath(fields[i + 2]);
                         break;
                     case "video":
-                        Path = Persistence.GetFilePath(fields[i + 2]);
+                        Path = Persistence.GetInstance().GetFilePath(fields[i + 2]);
                         break;
                 }
             }

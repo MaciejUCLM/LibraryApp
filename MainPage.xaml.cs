@@ -26,6 +26,7 @@ namespace LibraryApp
         {
             this.InitializeComponent();
             MainFrame.Navigate(typeof(Browse));
+            Persistence.GetInstance().Scan();
         }
 
         private void GoToDescription(object sender, RoutedEventArgs e)
