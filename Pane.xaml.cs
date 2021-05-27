@@ -20,6 +20,7 @@ namespace LibraryApp
 {
     public sealed partial class Pane : UserControl
     {
+
         public Pane()
         {
             this.InitializeComponent();
@@ -42,7 +43,7 @@ namespace LibraryApp
 
         private void GoToDescription(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Xml;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -16,6 +17,15 @@ namespace LibraryApp
     /// </summary>
     public sealed partial class Browse : Page
     {
+
+        private Frame navigation;
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            navigation = e.Parameter as Frame;
+        }
+
         public Browse()
         {
             this.InitializeComponent();
