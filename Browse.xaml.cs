@@ -19,6 +19,21 @@ namespace LibraryApp
         public Browse()
         {
             this.InitializeComponent();
+            PutPanes();
+        }
+
+        public void PutPanes()
+        {
+            TempTextBlock.Text += "Starting..." + "\n";
+            TempTextBlock.Text += MainPage.DirectoryPath + "\n";
+            if (File.Exists(MainPage.DirectoryPath))
+            {
+                TempTextBlock.Text += "Directory" + "\n";
+                foreach (string fileName in Directory.GetFiles(MainPage.DirectoryPath))
+                {
+                    TempTextBlock.Text += fileName + "\n";
+                }
+            }
         }
 
         public static T CloneXaml<T>(T source)
@@ -26,7 +41,6 @@ namespace LibraryApp
             EmptyPane pane = new EmptyPane();
             return default;
         }
-
 
     }
 }

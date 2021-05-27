@@ -27,10 +27,13 @@
                     Margin="20,15,20,0"
                     HorizontalAlignment="Stretch" />
                 <TextBlock
+                    x:Name="TempTextBlock"
                     Height="80"
                     Margin="20,20,20,20"
-                    Text=""
-                    TextWrapping="Wrap" />
+                    FocusVisualPrimaryBrush="White"
+                    FocusVisualSecondaryBrush="White"
+                    Text="#"
+                    TextWrapping="Wrap" FontSize="9" />
             </StackPanel>
         </Button>
 
