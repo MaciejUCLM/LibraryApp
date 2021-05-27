@@ -23,18 +23,19 @@ namespace LibraryApp
         }
 
         public void PutPanes()
-        {
-            TempTextBlock.Text += "Starting..." + "\n";
-            TempTextBlock.Text += "\n";
-            foreach (var v in Persistence.GetInstance().Videos)
-            {
-            }
-        }
+        {   
+            Persistence p = Persistence.GetInstance();
+            if (p.ScanPathExists())
+                p.Scan();
 
-        public static T CloneXaml<T>(T source)
-        {
-            EmptyPane pane = new EmptyPane();
-            return default;
+            Pane pane;
+            foreach (Video video in p.Videos)
+            {
+                pane = new Pane();
+                pane.SetImage(video.GetImage());
+                pane.SetText(video.Description);
+                PaneHolder.Children.Add(pane);
+            }
         }
 
     }

@@ -11,17 +11,38 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace LibraryApp
 {
-    public sealed partial class EmptyPane : UserControl
+    public sealed partial class Pane : UserControl
     {
-        public EmptyPane()
+        public Pane()
         {
             this.InitializeComponent();
+        }
+
+        public void SetImage(ImageSource image)
+        {
+            PaneImage.Source = image;
+        }
+
+        public void SetText(string text)
+        {
+            PaneTextBlock.Text = text;
+        }
+
+        public double GetHeight()
+        {
+            return PaneButton.Height;
+        }
+
+        private void GoToDescription(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

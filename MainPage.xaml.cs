@@ -25,8 +25,7 @@ namespace LibraryApp
         public MainPage()
         {
             this.InitializeComponent();
-            MainFrame.Navigate(typeof(Browse), MainFrame);
-            Persistence.GetInstance().Scan();
+            MainFrame.Navigate(typeof(Browse));
         }
 
         private void GoToDescription(object sender, RoutedEventArgs e)

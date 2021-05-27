@@ -9,33 +9,13 @@
     mc:Ignorable="d">
 
     <Grid Background="Black" FocusVisualPrimaryBrush="White">
-        <Button
-            Width="160"
-            Height="224"
-            Margin="22,22,0,0"
-            Padding="0,0,0,0"
-            VerticalAlignment="Top"
-            Background="#05000000"
-            BorderBrush="#FCD4D4D4"
-            BorderThickness="2,2,2,2"
-            FocusVisualPrimaryBrush="#FF616161"
-            FocusVisualSecondaryBrush="#FF6E6E6E"
-            Foreground="#FF707070">
-            <StackPanel Width="155.8" BorderBrush="White">
-                <Image
-                    Height="80"
-                    Margin="20,15,20,0"
-                    HorizontalAlignment="Stretch" />
-                <TextBlock
-                    x:Name="TempTextBlock"
-                    Height="80"
-                    Margin="20,20,20,20"
-                    FocusVisualPrimaryBrush="White"
-                    FocusVisualSecondaryBrush="White"
-                    Text="#"
-                    TextWrapping="Wrap" FontSize="9" />
-            </StackPanel>
-        </Button>
+        <ScrollViewer
+            Margin="30,30,30,30"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            VerticalScrollBarVisibility="Auto">
+            <VariableSizedWrapGrid x:Name="PaneHolder" Orientation="Horizontal" />
+        </ScrollViewer>
 
     </Grid>
 </Page>
