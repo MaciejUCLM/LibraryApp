@@ -91,12 +91,11 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                 FocusVisualSecondaryBrush="{x:Null}" />
             <Button
-                Width="291"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Stretch"
                 Click="GoToBrowse"
                 FocusVisualPrimaryBrush="#00000000"
-                Foreground="#00000000">
+                Foreground="#00000000" Width="290">
                 <Image
                     Margin="0,-6,0,-7"
                     d:LayoutRounding="Auto"
