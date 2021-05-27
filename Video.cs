@@ -8,13 +8,32 @@ namespace LibraryApp
 {
     class Video
     {
-        public string Title { get; set; }
-        public string Path { get; set; }
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string Image { get; set; } = "";
+        public string Path { get; set; } = "";
 
-        public Video(string title, string path)
+        public Video(string json)
         {
-            Title = title;
-            Path = path;
+            string[] fields = json.Split('"', StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 1; i < fields.Length; i+=4)
+            {
+                switch (fields[i])
+                {
+                    case "title":
+                        Title = fields[i + 2];
+                        break;
+                    case "desc":
+                        Description = fields[i + 2];
+                        break;
+                    case "image":
+                        Image = fields[i + 2];
+                        break;
+                    case "video":
+                        Path = fields[i + 2];
+                        break;
+                }
+            }
         }
     }
 }
