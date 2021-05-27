@@ -8,7 +8,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid Background="Black" FocusVisualPrimaryBrush="White">
+    <Grid
+        x:Name="PaneGrid"
+        Background="Black"
+        FocusVisualPrimaryBrush="White">
         <Button
             Width="160"
             Height="224"
@@ -32,8 +35,9 @@
                     Margin="20,20,20,20"
                     FocusVisualPrimaryBrush="White"
                     FocusVisualSecondaryBrush="White"
+                    FontSize="9"
                     Text="#"
-                    TextWrapping="Wrap" FontSize="9" />
+                    TextWrapping="Wrap" />
             </StackPanel>
         </Button>
 

@@ -23,15 +23,24 @@ namespace LibraryApp
         }
 
         public void PutPanes()
-        {
-            TempTextBlock.Text += "Starting..." + "\n";
-            TempTextBlock.Text += "\n";
-            // USE PERSISTENCE CLASS FOR THIS - NOT IMPLEMENTED YET - MACIEK
+        {   
+            Persistence p = Persistence.GetInstance();
+            if (p.ScanPathExists())
+                p.Scan();
+            
+            foreach (Video video in p.Videos)
+            {
+                Pane pane = new Pane();
+                
+            }
+
+            // USE PERSISTENCE CLASS FOR THIS - NOT IMPLE
+            // MENTED YET - MACIEK
         }
 
         public static T CloneXaml<T>(T source)
         {
-            EmptyPane pane = new EmptyPane();
+            Pane pane = new Pane();
             return default;
         }
 
