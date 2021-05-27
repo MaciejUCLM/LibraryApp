@@ -6,8 +6,6 @@ namespace LibraryApp
 {
     class Persistence
     {
-        public static string GetFilePath(string name) => Path.Combine(Environment.CurrentDirectory, "Videos", name);
-
         private static Persistence instance = null;
         public static Persistence GetInstance()
         {
@@ -23,8 +21,11 @@ namespace LibraryApp
 
         private Persistence()
         {
+            ScanPath = Path.Combine(Environment.CurrentDirectory, "Videos");
             mVideos = new List<Video>();
         }
+
+        public string GetFilePath(string name) => Path.Combine(ScanPath, name);
 
         public bool ScanPathExists() => Directory.Exists(ScanPath);
 

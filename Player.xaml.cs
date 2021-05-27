@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,12 @@ namespace LibraryApp
         public Player()
         {
             this.InitializeComponent();
+        }
+
+        public void SetSource(string src)
+        {
+            playerWindow.Source = MediaSource.CreateFromUri(new Uri(src));
+            playerWindow.MediaPlayer.Play();
         }
     }
 }
