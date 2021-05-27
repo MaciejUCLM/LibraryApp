@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -28,9 +29,10 @@ namespace LibraryApp
             this.InitializeComponent();
         }
 
-        public void SetSource(string src)
+        public void SetSource(Video src)
         {
-            playerWindow.Source = MediaSource.CreateFromUri(new Uri(src));
+            playerWindow.PosterSource = new BitmapImage(new Uri(src.Image));
+            playerWindow.Source = MediaSource.CreateFromUri(new Uri(src.Path));
             playerWindow.MediaPlayer.Play();
         }
     }
