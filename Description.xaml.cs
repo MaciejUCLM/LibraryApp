@@ -36,14 +36,18 @@ namespace LibraryApp
         {
             base.OnNavigatedTo(e);
             navigation = e.Parameter as Frame;
+            SetVideo(CommonData.GetInstance().SelectedVideo);
         }
 
         public void SetVideo(Video video)
         {
             details = video;
-            //details.Title
-            imageMovie.Source = details.GetImage();
-            descrTextBlock.Text = details.Description;
+            if (video != null)
+            {
+                //details.Title
+                imageMovie.Source = details.GetImage();
+                descrTextBlock.Text = details.Description;
+            }
         }
 
         private void watchButton_Click(object sender, RoutedEventArgs e)

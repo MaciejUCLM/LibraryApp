@@ -29,8 +29,16 @@ namespace LibraryApp
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            SetSource(CommonData.GetInstance().SelectedVideo);
+        }
+
         public void SetSource(Video src)
         {
+            if (src == null)
+                return;
             playerWindow.PosterSource = src.GetImage();
             playerWindow.Source = MediaSource.CreateFromUri(new Uri(src.Path));
             playerWindow.MediaPlayer.Play();

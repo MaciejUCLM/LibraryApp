@@ -122,6 +122,7 @@
     <Compile Include="Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CommonData.cs" />
     <Compile Include="Description.xaml.cs">
       <DependentUpon>Description.xaml</DependentUpon>
     </Compile>
