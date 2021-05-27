@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryApp
 {
-    class Video
+    public class Video
     {
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";

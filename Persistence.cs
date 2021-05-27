@@ -16,7 +16,7 @@ namespace LibraryApp
 
         private List<Video> mVideos;
 
-        public List<Video> Videos { get; }
+        public List<Video> Videos { get => mVideos; }
         public string ScanPath { get; set; }
 
         private Persistence()
