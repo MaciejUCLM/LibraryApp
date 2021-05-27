@@ -5,8 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:LibraryApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Width="1480"
-    Height="766"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
