@@ -31,6 +31,7 @@ namespace LibraryApp
 
         public void Scan()
         {
+            mVideos.Clear();
             if (!ScanPathExists())
                 ScanPath = Path.Combine(Environment.CurrentDirectory, "Videos");
             // throw new DirectoryNotFoundException("The specified library location has not been found");
