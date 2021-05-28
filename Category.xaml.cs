@@ -19,9 +19,37 @@ namespace LibraryApp
 {
     public sealed partial class Category : UserControl
     {
+
+        private string Name = "";
+
         public Category()
         {
             this.InitializeComponent();
         }
+
+        public Category(string name) : this()
+        {
+            SetText(name);
+        }
+
+        public void SetText(string name)
+        {
+            if (name == "")
+                name = "Others";
+            CategoryTextBlock.Text = name;
+            Name = name;
+        }
+
+        public void addChild(Pane child)
+        {
+            CategoryPanel.Children.Add(child);
+        }
+
+        public UIElementCollection GetChildren()
+        {
+            return CategoryPanel.Children;
+        }
+
+        public string GetName() => Name;
     }
 }

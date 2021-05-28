@@ -122,6 +122,9 @@
     <Compile Include="Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Category.xaml.cs">
+      <DependentUpon>Category.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CommonData.cs" />
     <Compile Include="Description.xaml.cs">
       <DependentUpon>Description.xaml</DependentUpon>
@@ -192,6 +195,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Browse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Category.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

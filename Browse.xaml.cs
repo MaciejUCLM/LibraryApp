@@ -32,35 +32,28 @@ namespace LibraryApp
             PutPanes();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            navigation = e.Parameter as Frame;
-        }
 
         public void PutPanes()
         {
             Persistence p = Persistence.GetInstance();
             if (p.ScanPathExists())
                 p.Scan();
-            Dictionary<string, Category> categriesHolders = new Dictionary<string, Category>();
-            Pane pane;
+
+            Dictionary<string, Category> categories = new Dictionary<string, Category>();
             foreach (Video video in p.Videos)
             {
-                pane = new Pane(video);
-                # PaneHolder.Children.Add(pane);
+                if (!categories.ContainsKey(video.Category))
+                    categories.Add(video.Category, new Category(video.Category));
+
+                categories[video.Category].addChild(new Pane(video));
             }
+
+            foreach (string category in categories.Keys)
+                MainHolder.Children.Add(categories[category]);
+          
         }
 
-        public Dictionary<string, Category> GenerateCategoriesHolders(List<Video> videos)
-        {
-            Dictionary<string, Category> categriesHolders = new Dictionary<string, Category>();
-            foreach(Video video in videos)
-            {
-                
-            }
-            return categriesHolders;
-        }
+      
 
     }
 }
