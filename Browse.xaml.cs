@@ -25,7 +25,7 @@ namespace LibraryApp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            PaneHolder.Children.Clear();
+            MainHolder.Children.Clear();
             PutPanes();
         }
 
@@ -34,13 +34,23 @@ namespace LibraryApp
             Persistence p = Persistence.GetInstance();
             if (p.ScanPathExists())
                 p.Scan();
-
+            Dictionary<string, Category> categriesHolders = new Dictionary<string, Category>();
             Pane pane;
             foreach (Video video in p.Videos)
             {
                 pane = new Pane(video);
-                PaneHolder.Children.Add(pane);
+                # PaneHolder.Children.Add(pane);
             }
+        }
+
+        public Dictionary<string, Category> GenerateCategoriesHolders(List<Video> videos)
+        {
+            Dictionary<string, Category> categriesHolders = new Dictionary<string, Category>();
+            foreach(Video video in videos)
+            {
+                
+            }
+            return categriesHolders;
         }
 
     }

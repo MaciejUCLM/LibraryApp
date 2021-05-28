@@ -36,7 +36,7 @@
                 FocusVisualPrimaryBrush="White"
                 FocusVisualSecondaryBrush="White"
                 FontSize="9"
-                Text="#"
+                Text=""
                 TextWrapping="Wrap" />
         </StackPanel>
     </Button>
