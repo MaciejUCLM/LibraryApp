@@ -87,7 +87,7 @@
                     Content="Browse"
                     FocusVisualPrimaryBrush="White"
                     FocusVisualSecondaryBrush="White"
-                    FontFamily="Bauhaus 93"
+                    FontFamily="Microsoft JhengHei UI Light"
                     FontSize="42"
                     Foreground="Red" />
                 <Button
@@ -98,7 +98,7 @@
                     Content="Player"
                     FocusVisualPrimaryBrush="White"
                     FocusVisualSecondaryBrush="White"
-                    FontFamily="Bauhaus 93"
+                    FontFamily="Microsoft JhengHei UI Light"
                     FontSize="42"
                     Foreground="Red" />
             </StackPanel>
