@@ -2,5 +2,10 @@
   "title": "C",
   "desc": "C was recored with cherry picked world class cast.",
   "image": "ilpadrino.jpg",
-  "video": "C.flv"
+  "video": "C.flv",
+  "category": "mafia",
+  "age": "18",
+  "director": "Francis Ford Coppola",
+  "rating": "5",
+  "release": "20 October 1972"
 }

@@ -44,7 +44,11 @@ namespace LibraryApp
             {
                 //details.Title
                 imageMovie.Source = details.GetImage();
-                descrTextBlock.Text = details.Description;
+                descrTextBlock.Text = details.Description 
+                                      +"\n\nDirector: " +details.Director
+                                      +"\n\nRating: " +details.Rating +"/5"
+                                      +"\n\nRelease Date: " +details.Release
+                                      +"\n\nMininum Age: " +details.Age;
             }
         }
 

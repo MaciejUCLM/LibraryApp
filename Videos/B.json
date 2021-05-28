@@ -2,5 +2,10 @@
   "title": "B",
   "desc": "B is a film only for the bravest.",
   "image": "ilpadrino.jpg",
-  "video": "B.m4v"
+  "video": "B.m4v",
+  "category": "mafia",
+  "age": "18",
+  "director": "Francis Ford Coppola",
+  "rating": "4",
+  "release": "20 October 1972"
 }

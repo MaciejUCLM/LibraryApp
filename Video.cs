@@ -17,6 +17,8 @@ namespace LibraryApp
         public string Category { get; set; } = "";
         public string Age { get; set; } = "";
         public string Director { get; set; } = "";
+        public string Rating { get; set; } = "";
+        public string Release { get; set; } = "";
 
         public Video(string json)
         {
@@ -45,6 +47,12 @@ namespace LibraryApp
                         break;
                     case "director":
                         Director = fields[i + 2];
+                        break;
+                    case "rating":
+                        Rating = fields[i + 2];
+                        break;
+                    case "release":
+                        Release = fields[i + 2];
                         break;
                 }
             }
