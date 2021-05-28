@@ -17,6 +17,9 @@ namespace LibraryApp
     /// </summary>
     public sealed partial class Browse : Page
     {
+
+        private Frame navigation;
+
         public Browse()
         {
             this.InitializeComponent();
@@ -27,6 +30,12 @@ namespace LibraryApp
             base.OnNavigatedTo(e);
             MainHolder.Children.Clear();
             PutPanes();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            navigation = e.Parameter as Frame;
         }
 
         public void PutPanes()

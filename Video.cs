@@ -14,6 +14,9 @@ namespace LibraryApp
         public string Description { get; set; } = "";
         public string Image { get; set; } = "";
         public string Path { get; set; } = "";
+        public string Category { get; set; } = "";
+        public string Age { get; set; } = "";
+        public string Director { get; set; } = "";
 
         public Video(string json)
         {
@@ -33,6 +36,15 @@ namespace LibraryApp
                         break;
                     case "video":
                         Path = Persistence.GetInstance().GetFilePath(fields[i + 2]);
+                        break;
+                    case "category":
+                        Category = fields[i + 2];
+                        break;
+                    case "age":
+                        Age = fields[i + 2];
+                        break;
+                    case "director":
+                        Director = fields[i + 2];
                         break;
                 }
             }
