@@ -9,6 +9,7 @@
     d:DesignWidth="400"
     mc:Ignorable="d">
     <StackPanel
+        x:Name="CategoryPanel"
         Width="357"
         Height="199"
         Margin="23,37,0,0"
