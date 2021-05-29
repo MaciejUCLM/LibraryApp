@@ -15,7 +15,7 @@
             VerticalAlignment="Stretch"
             VerticalScrollBarVisibility="Visible"
             Visibility="Visible">
-            <StackPanel x:Name="MainHolder" Orientation="Vertical" />
+            <StackPanel x:Name="MainHolder" Orientation="Vertical"  />
         </ScrollViewer>
 
     </Grid>
