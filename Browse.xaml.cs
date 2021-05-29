@@ -43,9 +43,12 @@ namespace LibraryApp
             foreach (Video video in p.Videos)
             {
                 if (!categories.ContainsKey(video.Category))
+                {
                     categories.Add(video.Category, new Category(video.Category));
+                }
 
-                categories[video.Category].addChild(new Pane(video));
+                Pane child = new Pane(video);
+                categories[video.Category].addChild(child);
             }
 
             foreach (string category in categories.Keys)

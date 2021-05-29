@@ -21,6 +21,7 @@ namespace LibraryApp
     {
 
         private string Name = "";
+        private int count = 0;
 
         public Category()
         {
